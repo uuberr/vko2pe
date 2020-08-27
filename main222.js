@@ -64,18 +64,10 @@ function laskin() {
         document.getElementById('tes4').innerHTML = "Syötä jokaiseen kohtaan numero";
     }
 }
-function kertau() {
-    var input = parseInt(document.getElementById('taul').value);
-    var kert = input + ' x 0 = ' + input * 0 + '<br>';
-    kert += input + ' x 1 = ' + input * 1 + '<br>';
-    kert += input + ' x 2 = ' + input * 2 + '<br>';
-    kert += input + ' x 3 = ' + input * 3 + '<br>';
-    kert += input + ' x 4 = ' + input * 4 + '<br>';
-    kert += input + ' x 5 = ' + input * 5 + '<br>';
-    kert += input + ' x 6 = ' + input * 6 + '<br>';
-    kert += input + ' x 7 = ' + input * 7 + '<br>';
-    kert += input + ' x 8 = ' + input * 8 + '<br>';
-    kert += input + ' x 9  = ' + input * 9 + '<br>';
-    kert += input + ' x 10 = ' + input * 10 + '<br>';
-    document.getElementById('tes5').innerHTML = kert
+function kertotau() {
+    let numero = parseInt(document.getElementById('taul').value)
+    for(let i = 0; i <= 10; i++) {
+        tulos = i * numero;
+        document.getElementById('tes5').innerText += `${numero} x ${i} = ${tulos}`+"\n";
+    }
 }
